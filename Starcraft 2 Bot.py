@@ -120,6 +120,29 @@ def find_target(self, state):
     else:
         return self.enemy_start_locations[0]
 
+ITERATIONS_PER_MINUTE = 165
+
+def __init__(self):
+    self.ITERATIONS_PER_MINUTE = 165
+    self.MAX_WORKERS = 50
+
+async def on_step(self, iteration):
+    self.iteration = iteration
+
+    elif len(self.units(HATCHERY)) < (self.iteration / self.ITERATIONS_PER_MINUTE):
+        if self.can_afford(HATCHERY) and not self.already_pending(HATCHERY):
+            await self.expand_now()
+
+if (len(self.units(HATCHERY)) * 16) > len(self.units(DRONE)) and len(self.units(DRONE)) < self.MAX_WORKERS:
+
+from sc2.constants import LARVA, DRONE, OVERLORD, EXTRACTOR, SPAWNINGPOOL, ROACHWARREN, ZERGLING, MUTALISK, HYDRALISKDEN, HYDRALISK, LAIR, HATCHERY
+
+print(self.iteration / self.ITERATIONS_PER_MINUTE)
+if self.units(OVERLORD).ready.exists:
+    OVERLORD = self.units(OVERLORD).ready.random
+
+
+
 run_game(maps.get("AbyssalReefLE"), [
             Bot(Race.Zerg, SentdeBot()),
             Computer(Race.Terran, Difficulty.hardest)
